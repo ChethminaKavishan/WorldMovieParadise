@@ -4,6 +4,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.neon-outline {
+    border: 4px solid;
+    border-image: linear-gradient(90deg, #00ffcc, #ff00cc, #00ffcc);
+    border-image-slice: 1;
+    padding: 20px;
+    animation: neon-border 5s linear infinite;
+    max-width: 800px;
+    margin: 20px;
+}
+
+@keyframes neon-border {
+    0% {
+        border-image-source: linear-gradient(90deg, #00ffcc, #ff00cc, #00ffcc);
+    }
+    100% {
+        border-image-source: linear-gradient(450deg, #00ffcc, #ff00cc, #00ffcc);
+    }
 }
 
 header {
@@ -12,8 +35,6 @@ header {
 }
 
 main {
-    max-width: 800px;
-    margin: 0 auto;
     padding: 2rem;
 }
 
@@ -34,4 +55,11 @@ h1, h2 {
 
 .github-button:hover {
     background-color: #00ffcc; /* Neon color on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #888;
 }
